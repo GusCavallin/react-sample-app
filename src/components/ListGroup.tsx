@@ -1,4 +1,4 @@
-import type { MouseEvent } from "react";
+import { useState } from "react";
 
 function ListGroup() {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
@@ -11,8 +11,9 @@ function ListGroup() {
     "Ellicot City",
   ];
 
-  // Event handler
-  const handleClick = (event: MouseEvent) => console.log(event);
+  // Hook
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  // const [name, setName] = useState('');  // A name varaible example, initialized with ''
 
   const getMessage = () => {
     return items.length === 0 && <p>No items found.</p>;
@@ -25,9 +26,15 @@ function ListGroup() {
       <ul className="list-group">
         {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             key={item}
-            onClick={handleClick} // Passing a reference to the function. Not calling it now.
+            onClick={() => {
+              setSelectedIndex(index);
+            }}
           >
             {item}
           </li>
