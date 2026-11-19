@@ -1,12 +1,12 @@
 interface Props {
-  name: string;
+  children: string;
 }
 
-const Button = ({ name }: Props) => {
+const Button = ({ children }: Props) => {
   // From: https://getbootstrap.com/docs/6.0/components/button/
   return (
     <button type="button" className="btn btn-primary">
-      {name}
+      {children}
     </button>
   );
 };

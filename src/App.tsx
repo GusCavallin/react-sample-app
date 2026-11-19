@@ -22,7 +22,7 @@ function App() {
         </b>
       </Alert>
       <hr />
-      <Button name="Click me!" />
+      <Button>I'm a button... Click me!</Button>
     </div>
   );
 }
