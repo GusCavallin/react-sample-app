@@ -22,7 +22,13 @@ function App() {
         </b>
       </Alert>
       <hr />
-      <Button>I'm a button... Click me!</Button>
+      <Button
+        onClick={() => {
+          console.log("clicked");
+        }}
+      >
+        I'm a button... Click me!
+      </Button>
     </div>
   );
 }
