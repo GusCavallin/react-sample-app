@@ -1,7 +1,9 @@
 // Created with ES7+ pluging and "rafce" command
 
+import type { ReactNode } from "react";
+
 interface Props {
-  children: string; // Supported by all componets
+  children: ReactNode; // Supported by all componets
 }
 
 const Alert = ({ children }: Props) => {
