@@ -23,6 +23,7 @@ function App() {
       </Alert>
       <hr />
       <Button
+        color="success"
         onClick={() => {
           console.log("clicked");
         }}
