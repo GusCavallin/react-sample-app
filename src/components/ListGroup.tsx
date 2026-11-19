@@ -1,14 +1,21 @@
 function ListGroup() {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
+  const items = [
+    "Quilmes",
+    "Buenos Aires",
+    "Plano",
+    "Chicago",
+    "Riverside",
+    "Ellicot City",
+  ];
+
   return (
     <>
       <h1>List</h1>
       <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
+        {items.map((item) => (
+          <li>{item}</li> // Oops... we "forgot" className="list-group-item"
+        ))}
       </ul>
     </>
   );
