@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+
 function ListGroup() {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
   let items = [
@@ -8,6 +10,9 @@ function ListGroup() {
     "Riverside",
     "Ellicot City",
   ];
+
+  // Event handler
+  const handleClick = (event: MouseEvent) => console.log(event);
 
   const getMessage = () => {
     return items.length === 0 && <p>No items found.</p>;
@@ -22,7 +27,7 @@ function ListGroup() {
           <li
             className="list-group-item"
             key={item}
-            onClick={(event) => console.log(event)}
+            onClick={handleClick} // Passing a reference to the function. Not calling it now.
           >
             {item}
           </li>
