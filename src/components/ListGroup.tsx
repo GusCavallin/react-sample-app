@@ -28,7 +28,7 @@ function ListGroup() {
           <li
             className={
               selectedIndex === index
-                ? "list-group-item active"
+                ? "list-group-item active" // "active" is the "selected" style
                 : "list-group-item"
             }
             key={item}
