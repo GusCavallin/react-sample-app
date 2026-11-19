@@ -1,30 +1,27 @@
 import { useState } from "react";
 
-function ListGroup() {
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup(prop: ListGroupProps) {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
-  let items = [
-    "Quilmes",
-    "Buenos Aires",
-    "Plano",
-    "Chicago",
-    "Riverside",
-    "Ellicot City",
-  ];
 
   // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // const [name, setName] = useState('');  // A name varaible example, initialized with ''
 
   const getMessage = () => {
-    return items.length === 0 && <p>No items found.</p>;
+    return prop.items.length === 0 && <p>No items found.</p>;
   };
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{prop.heading}</h1>
       {getMessage()}
       <ul className="list-group">
-        {items.map((item, index) => (
+        {prop.items.map((item, index) => (
           <li
             className={
               selectedIndex === index
