@@ -18,11 +18,11 @@ function ListGroup() {
       <h1>List</h1>
       {getMessage()}
       <ul className="list-group">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li
             className="list-group-item"
             key={item}
-            onClick={() => console.log(item + " clicked!")}
+            onClick={() => console.log(item + " clicked!", index)}
           >
             {item}
           </li>
