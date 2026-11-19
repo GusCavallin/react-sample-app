@@ -1,4 +1,5 @@
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 import Message from "./Message";
 
@@ -20,6 +21,8 @@ function App() {
           <i>Good bye!</i>
         </b>
       </Alert>
+      <hr />
+      <Button name="Click me!" />
     </div>
   );
 }
