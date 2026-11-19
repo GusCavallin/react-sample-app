@@ -18,7 +18,7 @@ function App() {
     <div>
       <ListGroup
         items={items}
-        heading="My List"
+        heading="My Cities List"
         onSelectItem={handleSelectItem}
       />
     </div>

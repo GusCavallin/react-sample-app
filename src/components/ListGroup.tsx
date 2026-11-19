@@ -6,10 +6,9 @@ interface ListGroupProps {
   onSelectItem: (item: string) => void; // function with one argument of type string that returns void.
 }
 
+// Properties (items, heading, onSelectItem) are immutable
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
-  // Hook
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-  // const [name, setName] = useState('');  // A name varaible example, initialized with ''
+  const [selectedIndex, setSelectedIndex] = useState(-1); // State (selectedIndex) is mutable
 
   return (
     <>
