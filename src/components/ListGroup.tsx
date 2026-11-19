@@ -1,9 +1,7 @@
-import { Fragment } from "react";
-
 function ListGroup() {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
   return (
-    <Fragment>
+    <>
       <h1>List</h1>
       <ul className="list-group">
         <li className="list-group-item">An item</li>
@@ -12,7 +10,7 @@ function ListGroup() {
         <li className="list-group-item">A fourth item</li>
         <li className="list-group-item">And a fifth one</li>
       </ul>
-    </Fragment>
+    </>
   );
 }
 
