@@ -6,20 +6,14 @@ interface ListGroupProps {
 }
 
 function ListGroup({ items, heading }: ListGroupProps) {
-  // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
-
   // Hook
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // const [name, setName] = useState('');  // A name varaible example, initialized with ''
 
-  const getMessage = () => {
-    return items.length === 0 && <p>No items found.</p>;
-  };
-
   return (
     <>
       <h1>{heading}</h1>
-      {getMessage()}
+      {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
           <li
