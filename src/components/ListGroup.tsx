@@ -5,7 +5,7 @@ interface ListGroupProps {
   heading: string;
 }
 
-function ListGroup(prop: ListGroupProps) {
+function ListGroup({ items, heading }: ListGroupProps) {
   // Sample List group borrowed from: https://getbootstrap.com/docs/6.0/components/list-group/  :)
 
   // Hook
@@ -13,15 +13,15 @@ function ListGroup(prop: ListGroupProps) {
   // const [name, setName] = useState('');  // A name varaible example, initialized with ''
 
   const getMessage = () => {
-    return prop.items.length === 0 && <p>No items found.</p>;
+    return items.length === 0 && <p>No items found.</p>;
   };
 
   return (
     <>
-      <h1>{prop.heading}</h1>
+      <h1>{heading}</h1>
       {getMessage()}
       <ul className="list-group">
-        {prop.items.map((item, index) => (
+        {items.map((item, index) => (
           <li
             className={
               selectedIndex === index
