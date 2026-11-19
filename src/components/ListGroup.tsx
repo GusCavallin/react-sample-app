@@ -8,7 +8,6 @@ function ListGroup() {
     "Riverside",
     "Ellicot City",
   ];
-  items = [];
 
   const getMessage = () => {
     return items.length === 0 && <p>No items found.</p>;
@@ -20,7 +19,13 @@ function ListGroup() {
       {getMessage()}
       <ul className="list-group">
         {items.map((item) => (
-          <li key={item}>{item}</li> // Oops... we "forgot" className="list-group-item"
+          <li
+            className="list-group-item"
+            key={item}
+            onClick={() => console.log("Clicked!")}
+          >
+            {item}
+          </li>
         ))}
       </ul>
     </>
