@@ -1,4 +1,15 @@
-# React + TypeScript + Vite
+# React Sample App
+
+Author: Gustavo Cavallin
+
+A small React + TypeScript learning project. It was built by following:
+
+- [React Tutorial for Beginners](https://www.youtube.com/watch?v=SqcY0GlETPk) (YouTube)
+- [Learn React](https://react.dev/learn), the Quick Start guide on react.dev
+
+See [CHANGELOG.md](CHANGELOG.md) for a summary of each commit and change.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
