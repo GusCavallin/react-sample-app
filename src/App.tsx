@@ -1,9 +1,12 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 import Message from "./Message";
 
 function App() {
+  const [alertVisible, setAlertVisible] = useState(false);
+
   return (
     <div>
       <Message />
@@ -16,16 +19,23 @@ function App() {
         }}
       />
       <hr />
-      <Alert>
-        <b>
-          <i>Good bye!</i>
-        </b>
-      </Alert>
+      {alertVisible && (
+        <Alert
+          onClose={() => {
+            setAlertVisible(false);
+          }}
+        >
+          <b>
+            <i>Good bye!</i>
+          </b>
+        </Alert>
+      )}
       <hr />
       <Button
         color="success"
         onClick={() => {
-          console.log("clicked");
+          console.log("Clicked on " + new Date());
+          setAlertVisible(true);
         }}
       >
         I'm a button... Click me!

@@ -1,5 +1,5 @@
 interface Props {
-  children: string;
+  children: string; // children is supported by all componets
   color?: "primary" | "secondary" | "success" | "warning" | "danger";
   onClick: () => void;
 }
