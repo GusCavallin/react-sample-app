@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 
 interface Props {
-  children: ReactNode; // children is supported by all componets
+  children: ReactNode; // children is supported by all components
   onClose: () => void;
 }
 
@@ -16,7 +16,7 @@ const Alert = ({ children, onClose }: Props) => {
         type="button"
         className="btn-close"
         onClick={onClose}
-        data-bs-dismiss="alert"
+        //        data-bs-dismiss="alert"  // not needed
         aria-label="Close"
       ></button>
     </div>
