@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Alert = ({ children, onClose }: Props) => {
-  // Borrowed from https://getbootstrap.com/docs/6.0/components/alert/
+  // CSS component doc: https://getbootstrap.com/docs/6.0/components/alert/
   return (
     <div className="alert alert-warning alert-dismissible" role="alert">
       {children}

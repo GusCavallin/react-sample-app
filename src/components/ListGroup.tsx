@@ -9,7 +9,7 @@ interface ListGroupProps {
 // Properties (items, heading, onSelectItem) are immutable
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1); // State (selectedIndex) is mutable
-
+  // CSS component doc: https://getbootstrap.com/docs/6.0/components/list-group/
   return (
     <>
       <h1>{heading}</h1>
